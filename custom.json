@@ -1,0 +1,150 @@
+{
+  "network_configuration": {
+    "default_compartment_id": "ocid1.compartment.oc1..aaaaaaaavtuph4jmebrgzhhp2ft2r2veoy2hqxmfbtqvyqm5xncnnfqkxt6q",
+    "default_enable_cis_checks": false,
+    "network_configuration_categories": {
+      "0-shared": {
+        "category_compartment_id": "ocid1.compartment.oc1..aaaaaaaavtuph4jmebrgzhhp2ft2r2veoy2hqxmfbtqvyqm5xncnnfqkxt6q",
+        "vcns": {
+          "VCN-FRA-LZ-HUB-KEY": {
+            "display_name": "custom_dhcp_vcn",
+            "cidr_blocks": [
+              "10.0.0.0/21"
+            ],
+            "dns_label": "dhcpvcn",
+            "block_nat_traffic": false,
+            "is_attach_drg": false,
+            "is_create_igw": false,
+            "is_ipv6enabled": false,
+            "is_oracle_gua_allocation_enabled": false,
+
+            "default_dhcp_options": {
+              "display_name": "dhcp-fra-lz-hub-default-custom",
+              "domain_name_type": "CUSTOM_DOMAIN",
+              "options": {
+                "dns": {
+                  "type": "DomainNameServer",
+                  "server_type": "CustomDnsServer",
+                  "custom_dns_servers": [
+                    "10.0.3.12",
+                    "10.0.3.11"
+                  ]
+                },
+                "search": {
+                  "type": "SearchDomain",
+                  "search_domain_names": [
+                    "test.com"
+                  ]
+                }
+              }
+            },
+
+            "subnets": {
+              "SN-FRA-LZ-HUB-LB-KEY": {
+                "display_name": "sn-fra-lz-hub-lb",
+                "cidr_block": "10.0.0.0/24",
+                "dns_label": "snfrahublb",
+                "dhcp_options_key": "default_dhcp_options",
+                "prohibit_internet_ingress": false,
+                "prohibit_public_ip_on_vnic": false,
+                "route_table_key": "RT-FRA-LZ-HUB-LB-KEY",
+                "security_list_keys": [
+                  "SL-FRA-LZ-HUB-LB-KEY"
+                ]
+              },
+              "SN-FRA-LZ-HUB-MGMT-KEY": {
+                "display_name": "sn-fra-lz-hub-mgmt",
+                "cidr_block": "10.0.1.0/24",
+                "dns_label": "snfrahubmgmt",
+                "dhcp_options_key": "default_dhcp_options",
+                "prohibit_internet_ingress": true,
+                "prohibit_public_ip_on_vnic": true,
+                "route_table_key": "RT-FRA-LZ-HUB-MGMT-KEY",
+                "security_list_keys": [
+                  "SL-FRA-LZ-HUB-MGMT-KEY"
+                ]
+              },
+              "SN-FRA-LZ-HUB-MON-KEY": {
+                "display_name": "sn-fra-lz-hub-mon",
+                "cidr_block": "10.0.2.0/24",
+                "dns_label": "snfrahubmon",
+                "dhcp_options_key": "default_dhcp_options",
+                "prohibit_internet_ingress": true,
+                "prohibit_public_ip_on_vnic": true,
+                "route_table_key": "RT-FRA-LZ-HUB-MGMT-KEY",
+                "security_list_keys": [
+                  "SL-FRA-LZ-HUB-MGMT-KEY"
+                ]
+              },
+              "SN-FRA-LZ-HUB-DNS": {
+                "display_name": "sn-fra-lz-hub-dns",
+                "cidr_block": "10.0.3.0/24",
+                "dns_label": "snfrahubdns",
+                "dhcp_options_key": "default_dhcp_options",
+                "prohibit_internet_ingress": true,
+                "prohibit_public_ip_on_vnic": true,
+                "route_table_key": "RT-FRA-LZ-HUB-MGMT-KEY",
+                "security_list_keys": [
+                  "SL-FRA-LZ-HUB-MGMT-KEY"
+                ]
+              }
+            },
+
+            "route_tables": {
+              "RT-FRA-LZ-HUB-LB-KEY": {
+                "display_name": "rt-fra-lz-hub-lb",
+                "route_rules": {
+                  "rt-internet": {
+                    "description": "Route to the Internet through Internet GW",
+                    "destination": "0.0.0.0/0",
+                    "destination_type": "CIDR_BLOCK",
+                    "network_entity_key": "IGW-FRA-LZ-HUB-KEY"
+                  }
+                }
+              },
+              "RT-FRA-LZ-HUB-MGMT-KEY": {
+                "display_name": "rt-fra-lz-hub-mgmt",
+                "route_rules": {
+                  "rt-natgw": {
+                    "description": "Route to Internet through NAT GW",
+                    "destination": "0.0.0.0/0",
+                    "destination_type": "CIDR_BLOCK",
+                    "network_entity_key": "NGW-FRA-LZ-HUB-KEY"
+                  }
+                }
+              }
+            },
+
+            "default_security_list": {
+              "egress_rules": [],
+              "ingress_rules": []
+            },
+
+            "security_lists": {
+              "SL-FRA-LZ-HUB-LB-KEY": {
+                "display_name": "sl-fra-lz-hub-lb",
+                "egress_rules": [],
+                "ingress_rules": []
+              },
+              "SL-FRA-LZ-HUB-MGMT-KEY": {
+                "display_name": "sl-fra-lz-hub-mgmt",
+                "egress_rules": [
+                  {
+                    "description": "Allow all outbound traffic",
+                    "dst": "0.0.0.0/0",
+                    "dst_type": "CIDR_BLOCK",
+                    "protocol": "ALL",
+                    "stateless": false
+                  }
+                ],
+                "ingress_rules": []
+              }
+            },
+
+            "non_vcn_specific_gateways": {}
+        },
+        "non_vcn_specific_gateways": {}
+      }
+    }
+  }
+}
