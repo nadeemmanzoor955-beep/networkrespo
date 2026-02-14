@@ -44,7 +44,7 @@
                 "display_name": "sn-fra-lz-hub-lb",
                 "cidr_block": "10.0.0.0/24",
                 "dns_label": "snfrahublb",
-                "dhcp_options_key": "default_dhcp_options",
+                "dhcp_options_key": "dhcp-fra-lz-hub-default-custom",
                 "prohibit_internet_ingress": false,
                 "prohibit_public_ip_on_vnic": false,
                 "route_table_key": "RT-FRA-LZ-HUB-LB-KEY",
@@ -56,7 +56,7 @@
                 "display_name": "sn-fra-lz-hub-mgmt",
                 "cidr_block": "10.0.1.0/24",
                 "dns_label": "snfrahubmgmt",
-                "dhcp_options_key": "default_dhcp_options",
+                "dhcp_options_key": "dhcp-fra-lz-hub-default-custom",
                 "prohibit_internet_ingress": true,
                 "prohibit_public_ip_on_vnic": true,
                 "route_table_key": "RT-FRA-LZ-HUB-MGMT-KEY",
@@ -68,7 +68,7 @@
                 "display_name": "sn-fra-lz-hub-mon",
                 "cidr_block": "10.0.2.0/24",
                 "dns_label": "snfrahubmon",
-                "dhcp_options_key": "default_dhcp_options",
+                "dhcp_options_key": "dhcp-fra-lz-hub-default-custom",
                 "prohibit_internet_ingress": true,
                 "prohibit_public_ip_on_vnic": true,
                 "route_table_key": "RT-FRA-LZ-HUB-MGMT-KEY",
@@ -80,7 +80,7 @@
                 "display_name": "sn-fra-lz-hub-dns",
                 "cidr_block": "10.0.3.0/24",
                 "dns_label": "snfrahubdns",
-                "dhcp_options_key": "default_dhcp_options",
+                "dhcp_options_key": "dhcp-fra-lz-hub-default-custom",
                 "prohibit_internet_ingress": true,
                 "prohibit_public_ip_on_vnic": true,
                 "route_table_key": "RT-FRA-LZ-HUB-MGMT-KEY",
@@ -148,3 +148,4 @@
     }
   }
 }
+
