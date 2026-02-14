@@ -1,0 +1,497 @@
+{
+  "network_configuration": {
+    "default_compartment_id": "ocid1.compartment.oc1..aaaaaaaavtuph4jmebrgzhhp2ft2r2veoy2hqxmfbtqvyqm5xncnnfqkxt6q",
+    "default_enable_cis_checks": false,
+    "network_configuration_categories": {
+      "0-shared": {
+        "category_compartment_id": "ocid1.compartment.oc1..aaaaaaaavtuph4jmebrgzhhp2ft2r2veoy2hqxmfbtqvyqm5xncnnfqkxt6q",
+        "vcns": {
+          "MT-PRD-APP-VCN": {
+            "display_name": "mt-prd-app-vcn",
+            "cidr_blocks": [
+              "10.96.0.0/16"
+            ],
+            "dns_label": "mtprdappvcn",
+            "block_nat_traffic": false,
+            "is_attach_drg": false,
+            "is_create_igw": false,
+            "is_ipv6enabled": false,
+            "is_oracle_gua_allocation_enabled": false,
+            "default_dhcp_options": {
+              "display_name": "infoblox",
+              "domain_name_type": "CUSTOM_DOMAIN",
+              "options": {
+                "dns": {
+                  "type": "DomainNameServer",
+                  "server_type": "CustomDnsServer",
+                  "custom_dns_servers": [
+                    "10.92.32.115",
+                    "10.31.5.15"
+                  ]
+                }
+              }
+            },
+            "route_tables": {
+              "mt-prd-app-vcn-RT": {
+                "display_name": "mt-prd-app-vcn-RT",
+                "route_rules": {}
+              }
+            },
+            "subnets": {
+              "mt-prd-app-Cube-snet": {
+                "display_name": "mt-prd-app-Cube-snet",
+                "cidr_block": "10.96.1.0/27",
+                "dns_label": "mtprdappcubesne",
+                "dhcp_options_key": "infoblox",
+                "route_table_key": "mt-prd-app-vcn-RT",
+                "prohibit_internet_ingress": true,
+                "prohibit_public_ip_on_vnic": true,
+                "security_list_keys": [
+                  "mt-prd-app-Cube-snet-SL"
+                ]
+              },
+              "mt-prd-app-DataStreamingtool-snet": {
+                "display_name": "mt-prd-app-DataStreamingtool-snet",
+                "cidr_block": "10.96.1.32/27",
+                "dns_label": "mtprdappdatastr",
+                "dhcp_options_key": "infoblox",
+                "route_table_key": "mt-prd-app-vcn-RT",
+                "prohibit_internet_ingress": true,
+                "prohibit_public_ip_on_vnic": true,
+                "security_list_keys": [
+                  "mt-prd-app-DataStreamingtool-snet-SL"
+                ]
+              },
+              "mt-prd-app-EARepository(Tools)Bizzdesign-snet": {
+                "display_name": "mt-prd-app-EARepository(Tools)Bizzdesign-snet",
+                "cidr_block": "10.96.1.64/27",
+                "dns_label": "mtprdappearepos",
+                "dhcp_options_key": "infoblox",
+                "route_table_key": "mt-prd-app-vcn-RT",
+                "prohibit_internet_ingress": true,
+                "prohibit_public_ip_on_vnic": true,
+                "security_list_keys": [
+                  "mt-prd-app-EARepository(Tools)Bizzdesign-snet-SL"
+                ]
+              },
+              "mt-prd-app-ECM-snet": {
+                "display_name": "mt-prd-app-ECM-snet",
+                "cidr_block": "10.96.1.96/27",
+                "dns_label": "mtprdappecmsnet",
+                "dhcp_options_key": "infoblox",
+                "route_table_key": "mt-prd-app-vcn-RT",
+                "prohibit_internet_ingress": true,
+                "prohibit_public_ip_on_vnic": true,
+                "security_list_keys": [
+                  "mt-prd-app-ECM-snet-SL"
+                ]
+              },
+              "mt-prd-app-EPMandtaskmanagement-snet": {
+                "display_name": "mt-prd-app-EPMandtaskmanagement-snet",
+                "cidr_block": "10.96.1.128/27",
+                "dns_label": "mtprdappepmandt",
+                "dhcp_options_key": "infoblox",
+                "route_table_key": "mt-prd-app-vcn-RT",
+                "prohibit_internet_ingress": true,
+                "prohibit_public_ip_on_vnic": true,
+                "security_list_keys": [
+                  "mt-prd-app-EPMandtaskmanagement-snet-SL"
+                ]
+              },
+              "mt-prd-app-MASApplication-snet": {
+                "display_name": "mt-prd-app-MASApplication-snet",
+                "cidr_block": "10.96.1.160/27",
+                "dns_label": "mtprdappmasappl",
+                "dhcp_options_key": "infoblox",
+                "route_table_key": "mt-prd-app-vcn-RT",
+                "prohibit_internet_ingress": true,
+                "prohibit_public_ip_on_vnic": true,
+                "security_list_keys": [
+                  "mt-prd-app-MASApplication-snet-SL"
+                ]
+              },
+              "mt-prd-app-NazahaEngine-snet": {
+                "display_name": "mt-prd-app-NazahaEngine-snet",
+                "cidr_block": "10.96.1.192/27",
+                "dns_label": "mtprdappnazahae",
+                "dhcp_options_key": "infoblox",
+                "route_table_key": "mt-prd-app-vcn-RT",
+                "prohibit_internet_ingress": true,
+                "prohibit_public_ip_on_vnic": true,
+                "security_list_keys": [
+                  "mt-prd-app-NazahaEngine-snet-SL"
+                ]
+              },
+              "mt-prd-app-privatemuseums-snet": {
+                "display_name": "mt-prd-app-privatemuseums-snet",
+                "cidr_block": "10.96.1.224/27",
+                "dns_label": "mtprdappprivate",
+                "dhcp_options_key": "infoblox",
+                "route_table_key": "mt-prd-app-vcn-RT",
+                "prohibit_internet_ingress": true,
+                "prohibit_public_ip_on_vnic": true,
+                "security_list_keys": [
+                  "mt-prd-app-privatemuseums-snet-SL"
+                ]
+              },
+              "mt-prd-app-SonarQubeDevOps-snet": {
+                "display_name": "mt-prd-app-SonarQubeDevOps-snet",
+                "cidr_block": "10.96.2.32/27",
+                "dns_label": "mtprdappsonarqu",
+                "dhcp_options_key": "infoblox",
+                "route_table_key": "mt-prd-app-vcn-RT",
+                "prohibit_internet_ingress": true,
+                "prohibit_public_ip_on_vnic": true,
+                "security_list_keys": [
+                  "mt-prd-app-SonarQubeDevOps-snet-SL"
+                ]
+              },
+              "mt-prd-app-VROsystem-snet": {
+                "display_name": "mt-prd-app-VROsystem-snet",
+                "cidr_block": "10.96.2.64/27",
+                "dns_label": "mtprdappvrosyst",
+                "dhcp_options_key": "infoblox",
+                "route_table_key": "mt-prd-app-vcn-RT",
+                "prohibit_internet_ingress": true,
+                "prohibit_public_ip_on_vnic": true,
+                "security_list_keys": [
+                  "mt-prd-app-VROsystem-snet-SL"
+                ]
+              },
+              "mt-prd-app-AVEVAApplicationServer-snet": {
+                "display_name": "mt-prd-app-AVEVAApplicationServer-snet",
+                "cidr_block": "10.96.2.96/27",
+                "dns_label": "mtprdappavevaap",
+                "dhcp_options_key": "infoblox",
+                "route_table_key": "mt-prd-app-vcn-RT",
+                "prohibit_internet_ingress": true,
+                "prohibit_public_ip_on_vnic": true,
+                "security_list_keys": [
+                  "mt-prd-app-AVEVAApplicationServer-snet-SL"
+                ]
+              },
+              "mt-prd-app-AVEVAHistorian-snet": {
+                "display_name": "mt-prd-app-AVEVAHistorian-snet",
+                "cidr_block": "10.96.2.128/27",
+                "dns_label": "mtprdappavevahi",
+                "dhcp_options_key": "infoblox",
+                "route_table_key": "mt-prd-app-vcn-RT",
+                "prohibit_internet_ingress": true,
+                "prohibit_public_ip_on_vnic": true,
+                "security_list_keys": [
+                  "mt-prd-app-AVEVAHistorian-snet-SL"
+                ]
+              },
+              "mt-prd-app-AVEVAOperationWorkstation-snet": {
+                "display_name": "mt-prd-app-AVEVAOperationWorkstation-snet",
+                "cidr_block": "10.96.2.160/27",
+                "dns_label": "mtprdappavevaop",
+                "dhcp_options_key": "infoblox",
+                "route_table_key": "mt-prd-app-vcn-RT",
+                "prohibit_internet_ingress": true,
+                "prohibit_public_ip_on_vnic": true,
+                "security_list_keys": [
+                  "mt-prd-app-AVEVAOperationWorkstation-snet-SL"
+                ]
+              },
+              "mt-prd-app-Planon-snet": {
+                "display_name": "mt-prd-app-Planon-snet",
+                "cidr_block": "10.96.2.192/27",
+                "dns_label": "mtprdappplanons",
+                "dhcp_options_key": "infoblox",
+                "route_table_key": "mt-prd-app-vcn-RT",
+                "prohibit_internet_ingress": true,
+                "prohibit_public_ip_on_vnic": true,
+                "security_list_keys": [
+                  "mt-prd-app-Planon-snet-SL"
+                ]
+              },
+              "mt-prd-app-Gallagheraccesscontrolsystem-snet": {
+                "display_name": "mt-prd-app-Gallagheraccesscontrolsystem-snet",
+                "cidr_block": "10.96.2.224/27",
+                "dns_label": "mtprdappgallagh",
+                "dhcp_options_key": "infoblox",
+                "route_table_key": "mt-prd-app-vcn-RT",
+                "prohibit_internet_ingress": true,
+                "prohibit_public_ip_on_vnic": true,
+                "security_list_keys": [
+                  "mt-prd-app-Gallagheraccesscontrolsystem-snet-SL"
+                ]
+              },
+              "mt-prd-app-AlfabetforEA-snet": {
+                "display_name": "mt-prd-app-AlfabetforEA-snet",
+                "cidr_block": "10.96.3.0/27",
+                "dns_label": "mtprdappalfabet",
+                "dhcp_options_key": "infoblox",
+                "route_table_key": "mt-prd-app-vcn-RT",
+                "prohibit_internet_ingress": true,
+                "prohibit_public_ip_on_vnic": true,
+                "security_list_keys": [
+                  "mt-prd-app-AlfabetforEA-snet-SL"
+                ]
+              },
+              "mt-prd-app-INTELLIGENCECENTER-snet": {
+                "display_name": "mt-prd-app-INTELLIGENCECENTER-snet",
+                "cidr_block": "10.96.3.32/27",
+                "dns_label": "mtprdappintelli",
+                "dhcp_options_key": "infoblox",
+                "route_table_key": "mt-prd-app-vcn-RT",
+                "prohibit_internet_ingress": true,
+                "prohibit_public_ip_on_vnic": true,
+                "security_list_keys": [
+                  "mt-prd-app-INTELLIGENCECENTER-snet-SL"
+                ]
+              },
+              "mt-prd-app-PrintServer-snet": {
+                "display_name": "mt-prd-app-PrintServer-snet",
+                "cidr_block": "10.96.3.64/27",
+                "dns_label": "mtprdappprintse",
+                "dhcp_options_key": "infoblox",
+                "route_table_key": "mt-prd-app-vcn-RT",
+                "prohibit_internet_ingress": true,
+                "prohibit_public_ip_on_vnic": true,
+                "security_list_keys": [
+                  "mt-prd-app-PrintServer-snet-SL"
+                ]
+              },
+              "mt-prd-app-MDM-snet": {
+                "display_name": "mt-prd-app-MDM-snet",
+                "cidr_block": "10.96.3.96/27",
+                "dns_label": "mtprdappmdmsnet",
+                "dhcp_options_key": "infoblox",
+                "route_table_key": "mt-prd-app-vcn-RT",
+                "prohibit_internet_ingress": true,
+                "prohibit_public_ip_on_vnic": true,
+                "security_list_keys": [
+                  "mt-prd-app-MDM-snet-SL"
+                ]
+              },
+              "mt-prd-app-ProdDeveloperPortal-snet": {
+                "display_name": "mt-prd-app-ProdDeveloperPortal-snet",
+                "cidr_block": "10.96.3.128/27",
+                "dns_label": "mtprdappproddev",
+                "dhcp_options_key": "infoblox",
+                "route_table_key": "mt-prd-app-vcn-RT",
+                "prohibit_internet_ingress": true,
+                "prohibit_public_ip_on_vnic": true,
+                "security_list_keys": [
+                  "mt-prd-app-ProdDeveloperPortal-snet-SL"
+                ]
+              },
+              "mt-prd-app-ProjectManagementSolutionP+-snet": {
+                "display_name": "mt-prd-app-ProjectManagementSolutionP+-snet",
+                "cidr_block": "10.96.3.160/27",
+                "dns_label": "mtprdappproject",
+                "dhcp_options_key": "infoblox",
+                "route_table_key": "mt-prd-app-vcn-RT",
+                "prohibit_internet_ingress": true,
+                "prohibit_public_ip_on_vnic": true,
+                "security_list_keys": [
+                  "mt-prd-app-ProjectManagementSolutionP+-snet-SL"
+                ]
+              },
+              "mt-prd-app-ProjectManagementSolutionS+-snet": {
+                "display_name": "mt-prd-app-ProjectManagementSolutionS+-snet",
+                "cidr_block": "10.96.3.192/27",
+                "dns_label": "mtprdappproject",
+                "dhcp_options_key": "infoblox",
+                "route_table_key": "mt-prd-app-vcn-RT",
+                "prohibit_internet_ingress": true,
+                "prohibit_public_ip_on_vnic": true,
+                "security_list_keys": [
+                  "mt-prd-app-ProjectManagementSolutionS+-snet-SL"
+                ]
+              },
+              "mt-prd-app-Research&studies-snet": {
+                "display_name": "mt-prd-app-Research&studies-snet",
+                "cidr_block": "10.96.3.224/27",
+                "dns_label": "mtprdappresearc",
+                "dhcp_options_key": "infoblox",
+                "route_table_key": "mt-prd-app-vcn-RT",
+                "prohibit_internet_ingress": true,
+                "prohibit_public_ip_on_vnic": true,
+                "security_list_keys": [
+                  "mt-prd-app-Research&studies-snet-SL"
+                ]
+              },
+              "mt-prd-app-AzureDevops-snet": {
+                "display_name": "mt-prd-app-AzureDevops-snet",
+                "cidr_block": "10.96.4.0/27",
+                "dns_label": "mtprdappazurede",
+                "dhcp_options_key": "infoblox",
+                "route_table_key": "mt-prd-app-vcn-RT",
+                "prohibit_internet_ingress": true,
+                "prohibit_public_ip_on_vnic": true,
+                "security_list_keys": [
+                  "mt-prd-app-AzureDevops-snet-SL"
+                ]
+              },
+              "mt-prd-app-RPAapp-snet": {
+                "display_name": "mt-prd-app-RPAapp-snet",
+                "cidr_block": "10.96.4.32/27",
+                "dns_label": "mtprdapprpaapps",
+                "dhcp_options_key": "infoblox",
+                "route_table_key": "mt-prd-app-vcn-RT",
+                "prohibit_internet_ingress": true,
+                "prohibit_public_ip_on_vnic": true,
+                "security_list_keys": [
+                  "mt-prd-app-RPAapp-snet-SL"
+                ]
+              },
+              "mt-prd-app-RPArobots-snet": {
+                "display_name": "mt-prd-app-RPArobots-snet",
+                "cidr_block": "10.96.4.64/26",
+                "dns_label": "mtprdapprparobo",
+                "dhcp_options_key": "infoblox",
+                "route_table_key": "mt-prd-app-vcn-RT",
+                "prohibit_internet_ingress": true,
+                "prohibit_public_ip_on_vnic": true,
+                "security_list_keys": [
+                  "mt-prd-app-RPArobots-snet-SL"
+                ]
+              }
+            },
+            "default_security_list": {
+              "egress_rules": [],
+              "ingress_rules": []
+            },
+            "security_lists": {
+              "mt-prd-app-Cube-snet-SL": {
+                "display_name": "mt-prd-app-Cube-snet-SL",
+                "egress_rules": [],
+                "ingress_rules": []
+              },
+              "mt-prd-app-DataStreamingtool-snet-SL": {
+                "display_name": "mt-prd-app-DataStreamingtool-snet-SL",
+                "egress_rules": [],
+                "ingress_rules": []
+              },
+              "mt-prd-app-EARepository(Tools)Bizzdesign-snet-SL": {
+                "display_name": "mt-prd-app-EARepository(Tools)Bizzdesign-snet-SL",
+                "egress_rules": [],
+                "ingress_rules": []
+              },
+              "mt-prd-app-ECM-snet-SL": {
+                "display_name": "mt-prd-app-ECM-snet-SL",
+                "egress_rules": [],
+                "ingress_rules": []
+              },
+              "mt-prd-app-EPMandtaskmanagement-snet-SL": {
+                "display_name": "mt-prd-app-EPMandtaskmanagement-snet-SL",
+                "egress_rules": [],
+                "ingress_rules": []
+              },
+              "mt-prd-app-MASApplication-snet-SL": {
+                "display_name": "mt-prd-app-MASApplication-snet-SL",
+                "egress_rules": [],
+                "ingress_rules": []
+              },
+              "mt-prd-app-NazahaEngine-snet-SL": {
+                "display_name": "mt-prd-app-NazahaEngine-snet-SL",
+                "egress_rules": [],
+                "ingress_rules": []
+              },
+              "mt-prd-app-privatemuseums-snet-SL": {
+                "display_name": "mt-prd-app-privatemuseums-snet-SL",
+                "egress_rules": [],
+                "ingress_rules": []
+              },
+              "mt-prd-app-SonarQubeDevOps-snet-SL": {
+                "display_name": "mt-prd-app-SonarQubeDevOps-snet-SL",
+                "egress_rules": [],
+                "ingress_rules": []
+              },
+              "mt-prd-app-VROsystem-snet-SL": {
+                "display_name": "mt-prd-app-VROsystem-snet-SL",
+                "egress_rules": [],
+                "ingress_rules": []
+              },
+              "mt-prd-app-AVEVAApplicationServer-snet-SL": {
+                "display_name": "mt-prd-app-AVEVAApplicationServer-snet-SL",
+                "egress_rules": [],
+                "ingress_rules": []
+              },
+              "mt-prd-app-AVEVAHistorian-snet-SL": {
+                "display_name": "mt-prd-app-AVEVAHistorian-snet-SL",
+                "egress_rules": [],
+                "ingress_rules": []
+              },
+              "mt-prd-app-AVEVAOperationWorkstation-snet-SL": {
+                "display_name": "mt-prd-app-AVEVAOperationWorkstation-snet-SL",
+                "egress_rules": [],
+                "ingress_rules": []
+              },
+              "mt-prd-app-Planon-snet-SL": {
+                "display_name": "mt-prd-app-Planon-snet-SL",
+                "egress_rules": [],
+                "ingress_rules": []
+              },
+              "mt-prd-app-Gallagheraccesscontrolsystem-snet-SL": {
+                "display_name": "mt-prd-app-Gallagheraccesscontrolsystem-snet-SL",
+                "egress_rules": [],
+                "ingress_rules": []
+              },
+              "mt-prd-app-AlfabetforEA-snet-SL": {
+                "display_name": "mt-prd-app-AlfabetforEA-snet-SL",
+                "egress_rules": [],
+                "ingress_rules": []
+              },
+              "mt-prd-app-INTELLIGENCECENTER-snet-SL": {
+                "display_name": "mt-prd-app-INTELLIGENCECENTER-snet-SL",
+                "egress_rules": [],
+                "ingress_rules": []
+              },
+              "mt-prd-app-PrintServer-snet-SL": {
+                "display_name": "mt-prd-app-PrintServer-snet-SL",
+                "egress_rules": [],
+                "ingress_rules": []
+              },
+              "mt-prd-app-MDM-snet-SL": {
+                "display_name": "mt-prd-app-MDM-snet-SL",
+                "egress_rules": [],
+                "ingress_rules": []
+              },
+              "mt-prd-app-ProdDeveloperPortal-snet-SL": {
+                "display_name": "mt-prd-app-ProdDeveloperPortal-snet-SL",
+                "egress_rules": [],
+                "ingress_rules": []
+              },
+              "mt-prd-app-ProjectManagementSolutionP+-snet-SL": {
+                "display_name": "mt-prd-app-ProjectManagementSolutionP+-snet-SL",
+                "egress_rules": [],
+                "ingress_rules": []
+              },
+              "mt-prd-app-ProjectManagementSolutionS+-snet-SL": {
+                "display_name": "mt-prd-app-ProjectManagementSolutionS+-snet-SL",
+                "egress_rules": [],
+                "ingress_rules": []
+              },
+              "mt-prd-app-Research&studies-snet-SL": {
+                "display_name": "mt-prd-app-Research&studies-snet-SL",
+                "egress_rules": [],
+                "ingress_rules": []
+              },
+              "mt-prd-app-AzureDevops-snet-SL": {
+                "display_name": "mt-prd-app-AzureDevops-snet-SL",
+                "egress_rules": [],
+                "ingress_rules": []
+              },
+              "mt-prd-app-RPAapp-snet-SL": {
+                "display_name": "mt-prd-app-RPAapp-snet-SL",
+                "egress_rules": [],
+                "ingress_rules": []
+              },
+              "mt-prd-app-RPArobots-snet-SL": {
+                "display_name": "mt-prd-app-RPArobots-snet-SL",
+                "egress_rules": [],
+                "ingress_rules": []
+              }
+            },
+            "non_vcn_specific_gateways": {}
+          }
+        },
+        "non_vcn_specific_gateways": {}
+      }
+    }
+  }
+}
