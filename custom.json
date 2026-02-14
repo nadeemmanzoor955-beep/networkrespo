@@ -6,10 +6,10 @@
       "0-shared": {
         "category_compartment_id": "ocid1.compartment.oc1..aaaaaaaavtuph4jmebrgzhhp2ft2r2veoy2hqxmfbtqvyqm5xncnnfqkxt6q",
         "vcns": {
-          "VCN-FRA-LZ-HUB-KEY": {
+          "VCN-FRA-LZZ-HUB-KEY": {
             "display_name": "custom_dhcp_vcn",
             "cidr_blocks": [
-              "10.0.0.0/21"
+              "10.100.0.0/21"
             ],
             "dns_label": "dhcpvcn",
             "block_nat_traffic": false,
@@ -40,9 +40,9 @@
             },
 
             "subnets": {
-              "SN-FRA-LZ-HUB-LB-KEY": {
+              "SN-FRA-LZZZ-HUB-LB-KEY": {
                 "display_name": "sn-fra-lz-hub-lb",
-                "cidr_block": "10.0.0.0/24",
+                "cidr_block": "10.100.5.0/24",
                 "dns_label": "snfrahublb",
                 "dhcp_options_key": "dhcp-fra-lz-hub-default-custom",
                 "prohibit_internet_ingress": false,
@@ -52,9 +52,9 @@
                   "SL-FRA-LZ-HUB-LB-KEY"
                 ]
               },
-              "SN-FRA-LZ-HUB-MGMT-KEY": {
+              "SN-FRA-LZZZ-HUB-MGMT-KEY": {
                 "display_name": "sn-fra-lz-hub-mgmt",
-                "cidr_block": "10.0.1.0/24",
+                "cidr_block": "10.100.6.0/24",
                 "dns_label": "snfrahubmgmt",
                 "dhcp_options_key": "dhcp-fra-lz-hub-default-custom",
                 "prohibit_internet_ingress": true,
@@ -64,9 +64,9 @@
                   "SL-FRA-LZ-HUB-MGMT-KEY"
                 ]
               },
-              "SN-FRA-LZ-HUB-MON-KEY": {
+              "SN-FRA-LZZZ-HUB-MON-KEY": {
                 "display_name": "sn-fra-lz-hub-mon",
-                "cidr_block": "10.0.2.0/24",
+                "cidr_block": "10.100.7.0/24",
                 "dns_label": "snfrahubmon",
                 "dhcp_options_key": "dhcp-fra-lz-hub-default-custom",
                 "prohibit_internet_ingress": true,
@@ -76,9 +76,9 @@
                   "SL-FRA-LZ-HUB-MGMT-KEY"
                 ]
               },
-              "SN-FRA-LZ-HUB-DNS": {
+              "SN-FRA-LZZZ-HUB-DNS": {
                 "display_name": "sn-fra-lz-hub-dns",
-                "cidr_block": "10.0.3.0/24",
+                "cidr_block": "10.100.8.0/24",
                 "dns_label": "snfrahubdns",
                 "dhcp_options_key": "dhcp-fra-lz-hub-default-custom",
                 "prohibit_internet_ingress": true,
@@ -148,4 +148,5 @@
     }
   }
 }
+
 
